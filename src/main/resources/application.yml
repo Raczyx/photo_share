@@ -1,0 +1,26 @@
+spring:
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 100MB
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url:  jdbc:mysql://172.16.77.180:3306/pythondb
+    username: temper
+#    url: jdbc:mysql://rm-bp174t2q4533812a10o.mysql.rds.aliyuncs.com:3306/pythondb
+#    username: tempuser
+    password: '@Database'
+myproperty:
+  overtime: 172800
+  header: jwt
+
+server:
+  port: 8080
+
+
+
+minio: #http://114.132.248.191/        http://47.106.183.36:9000
+  endpoint: http://172.16.77.180:9000 #MinIO服务所在地址
+  bucketName: photo #存储桶名称
+  accessKey: minioadmin #访问的key
+  secretKey: minioadmin #访问的秘钥
